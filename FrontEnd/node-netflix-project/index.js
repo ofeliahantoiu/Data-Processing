@@ -2,6 +2,13 @@ import express from "express";
 import open from "open";
 import path from "path";
 
+require("dotenv").config();
+
+const apiKey = process.env.TMDB_API_KEY;
+const accessToken = process.env.TMDB_ACCESS_TOKEN;
+
+console.log(apiKey); // Just to check if it's working
+
 const app = express();
 const __dirname = path.resolve();
 const port = 3001;
